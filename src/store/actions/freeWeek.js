@@ -1,27 +1,42 @@
 import * as actionTypes from './actionTypes';
-import axios from '../../axios-orders';
+import Axios from 'axios';
 
-export const fetchFreeWeekFailed = () => {
+export const fetchFreeWeekFail = ( error ) => {
     return {
-        type: actionTypes.FETCH_INGREDIENTS_FAILED
+        type: actionTypes.FETCH_FreeWeek_FAIL,
+        error: error
     };
 };
 
-export const setFreeWeek = ( freeWeek ) => {
+export const fetchFreeWeekStart = () => {
     return {
-        type: actionTypes.SET_INGREDIENTS,
+        type: actionTypes.FETCH_FreeWeek_START
+    };
+};
+
+export const fetchFreeWeekSuccess = ( freeWeek ) => {
+    return {
+        type: actionTypes.FETCH_ORDERS_SUCCESS,
         freeWeek
     };
 };
 
-export const initFreeWeek = () => {
+export const fetchFreeWeek = () => {
     return dispatch => {
-        axios.get( "/freeWeek" )
-            .then( response => {
-               dispatch(setFreeWeek(response.data));
+        dispatch(fetchFreeWeekStart());
+        Axios.get( '/orders.json' )
+            .then( res => {
+                const fetchedFreeWeek = [];
+                for ( let key in res.data ) {
+                    fetchedFreeWeek.push( {
+                        ...res.data[key],
+                        id: key
+                    } );
+                }
+                dispatch(fetchFreeWeekSuccess(fetchedFreeWeek));
             } )
-            .catch( error => {
-                dispatch(fetchFreeWeekFailed());
+            .catch( err => {
+                dispatch(fetchFreeWeekFail(err));
             } );
     };
 };

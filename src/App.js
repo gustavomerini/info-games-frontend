@@ -23,28 +23,27 @@ class App extends Component {
           >
             <Menu.Item key="1">
               <span>Home</span>
-              <Link to="/home" exact />
+              <Link to="/home" />
             </Menu.Item>
             <Menu.Item key="2">
               <span>Free Week</span>
-              <Link to="/free-week" exact />
+              <Link to="/free-week" />
             </Menu.Item>
             <Menu.Item key="3">
               <span>Promotions</span>
-              <Link to="/promotions" exact />
+              <Link to="/promotions" />
             </Menu.Item>
-
           </Menu>
         </Header>
         <Content style={{ padding: "0 50px", marginTop: 64 }}>
           <Switch>
-            <Route path="/free-week" component={FreeWeek} />
-            <Route path="/promotions" component={Promotions} />
+            <Route path="/free-week" exact component={FreeWeek} />
+            <Route path="/promotions" exact component={Promotions} />
             <Route path="/home" exact component={Home} />
           </Switch>
         </Content>
         <Footer style={{ textAlign: "center" }}>
-          Xirubot ©2019 Created by Xiru
+          Xirubot ©2019 With ❤ by Xiruteam
         </Footer>
       </Layout>
     );

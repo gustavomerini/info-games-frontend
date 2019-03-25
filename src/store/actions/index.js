@@ -1,10 +1,6 @@
 export {
-    addIngredient,
-    removeIngredient,
-    initIngredients
-} from './burgerBuilder';
+    fetchFreeWeek
+} from './freeWeek';
 export {
-    purchaseBurger,
-    purchaseInit,
-    fetchOrders
-} from './order';
+    fetchPromotions,
+} from './promotions';

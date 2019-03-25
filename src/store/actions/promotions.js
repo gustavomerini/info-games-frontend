@@ -1,23 +1,30 @@
 import * as actionTypes from './actionTypes';
-import axios from '../../axios-orders';
+import Axios from 'axios';
 
 export const fetchPromotionsFail = ( error ) => {
     return {
-        type: actionTypes.FETCH_Promotions_FAIL,
+        type: actionTypes.FETCH_PROMOTIONS_FAIL,
         error: error
     };
 };
 
 export const fetchPromotionsStart = () => {
     return {
-        type: actionTypes.FETCH_Promotions_START
+        type: actionTypes.FETCH_PROMOTIONS_START
+    };
+};
+
+export const fetchPromotionsSuccess = ( freeWeek ) => {
+    return {
+        type: actionTypes.FETCH_PROMOTIONS_SUCCESS,
+        freeWeek
     };
 };
 
 export const fetchPromotions = () => {
     return dispatch => {
         dispatch(fetchPromotionsStart());
-        axios.get( '/orders.json' )
+        Axios.get( '/promotions' )
             .then( res => {
                 const fetchedPromotions = [];
                 for ( let key in res.data ) {

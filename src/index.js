@@ -14,8 +14,8 @@ import promotionsReducer from './store/reducers/promotions';
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const rootReducer = combineReducers({
-    freeWeek: freeWeekReducer,
-    promotions: promotionsReducer
+  freeWeekReducer: freeWeekReducer,
+  promotionsReducer: promotionsReducer
 });
 
 const store = createStore(rootReducer, composeEnhancers(

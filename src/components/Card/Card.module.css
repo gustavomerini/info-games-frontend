@@ -4,6 +4,7 @@
   transition: 0.3s;
   width: 40%;
   height: 40%;
+  margin: 20px;
 }
 
 /* On mouse-over, add a deeper shadow */
@@ -16,15 +17,11 @@
   padding: 2px 16px;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .container img {
-  height: 100px;
-  width: 100px;
-}
-
-.App {
-  display: flex;
-  justify-content: center;
-  align-content: center;
+  margin-top: 10px;
+  height: 120px;
+  width: 120px;
 }

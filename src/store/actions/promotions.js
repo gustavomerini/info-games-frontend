@@ -3,28 +3,28 @@ import Axios from 'axios';
 
 export const fetchPromotionsFail = ( error ) => {
     return {
-        type: actionTypes.FETCH_PROMOTIONS_FAIL,
+        type: actionTypes.FETCH_Promotions_FAIL,
         error: error
     };
 };
 
 export const fetchPromotionsStart = () => {
     return {
-        type: actionTypes.FETCH_PROMOTIONS_START
+        type: actionTypes.FETCH_Promotions_START
     };
 };
 
-export const fetchPromotionsSuccess = ( freeWeek ) => {
+export const fetchPromotionsSuccess = ( promotions ) => {
     return {
-        type: actionTypes.FETCH_PROMOTIONS_SUCCESS,
-        freeWeek
+        type: actionTypes.FETCH_ORDERS_SUCCESS,
+        promotions
     };
 };
 
 export const fetchPromotions = () => {
     return dispatch => {
         dispatch(fetchPromotionsStart());
-        Axios.get( '/promotions' )
+        Axios.get( '/orders.json' )
             .then( res => {
                 const fetchedPromotions = [];
                 for ( let key in res.data ) {

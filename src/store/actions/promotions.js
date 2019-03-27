@@ -1,42 +1,34 @@
-import * as actionTypes from './actionTypes';
-import Axios from 'axios';
+import * as actionTypes from "./actionTypes";
+import axios from "../../axios";
 
-export const fetchPromotionsFail = ( error ) => {
-    return {
-        type: actionTypes.FETCH_Promotions_FAIL,
-        error: error
-    };
+export const fetchPromotionsFail = error => {
+  return {
+    type: actionTypes.FETCH_Promotions_FAIL,
+    error: error
+  };
 };
 
 export const fetchPromotionsStart = () => {
-    return {
-        type: actionTypes.FETCH_Promotions_START
-    };
+  return {
+    type: actionTypes.FETCH_Promotions_START
+  };
 };
 
-export const fetchPromotionsSuccess = ( promotions ) => {
-    return {
-        type: actionTypes.FETCH_ORDERS_SUCCESS,
-        promotions
-    };
+export const fetchPromotionsSuccess = promotions => {
+  return {
+    type: actionTypes.FETCH_ORDERS_SUCCESS,
+    promotions
+  };
 };
 
 export const fetchPromotions = () => {
-    return dispatch => {
-        dispatch(fetchPromotionsStart());
-        Axios.get( '/orders.json' )
-            .then( res => {
-                const fetchedPromotions = [];
-                for ( let key in res.data ) {
-                    fetchedPromotions.push( {
-                        ...res.data[key],
-                        id: key
-                    } );
-                }
-                dispatch(fetchPromotionsSuccess(fetchedPromotions));
-            } )
-            .catch( err => {
-                dispatch(fetchPromotionsFail(err));
-            } );
-    };
+  return dispatch => {
+    dispatch(fetchPromotionsStart());
+    axios
+      .get("/orders.json")
+      .then(res => dispatch(fetchPromotionsSuccess(res)))
+      .catch(err => {
+        dispatch(fetchPromotionsFail(err));
+      });
+  };
 };

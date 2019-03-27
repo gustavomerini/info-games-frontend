@@ -3,20 +3,20 @@ import axios from "../../axios";
 
 export const fetchPromotionsFail = error => {
   return {
-    type: actionTypes.FETCH_Promotions_FAIL,
+    type: actionTypes.FETCH_PROMOTIONS_FAIL,
     error: error
   };
 };
 
 export const fetchPromotionsStart = () => {
   return {
-    type: actionTypes.FETCH_Promotions_START
+    type: actionTypes.FETCH_PROMOTIONS_START
   };
 };
 
 export const fetchPromotionsSuccess = promotions => {
   return {
-    type: actionTypes.FETCH_ORDERS_SUCCESS,
+    type: actionTypes.FETCH_PROMOTIONS_SUCCESS,
     promotions
   };
 };
@@ -25,10 +25,8 @@ export const fetchPromotions = () => {
   return dispatch => {
     dispatch(fetchPromotionsStart());
     axios
-      .get("/orders.json")
-      .then(res => dispatch(fetchPromotionsSuccess(res)))
-      .catch(err => {
-        dispatch(fetchPromotionsFail(err));
-      });
+      .get("/promotions")
+      .then(res => dispatch(fetchPromotionsSuccess(res.data)))
+      .catch(err => dispatch(fetchPromotionsFail(err)));
   };
 };

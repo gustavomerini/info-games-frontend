@@ -2,33 +2,7 @@ import * as actionTypes from "../actions/actionTypes";
 import { updateObject } from "../utility";
 
 const initialState = {
-  promotions: [
-    {
-      name: "Ezreal Pulsefire",
-      price: 3250,
-      img: "https://picsum.photos/200/300/?random"
-    },
-    {
-      name: "Caitlyn Pulsefire",
-      price: 1820,
-      img: "https://picsum.photos/200/300/?random"
-    },
-    {
-      name: "Darius Deus-Rei",
-      price: 1820,
-      img: "https://picsum.photos/200/300/?random"
-    },
-    {
-      name: "Zoe Cibernética",
-      price: 1350,
-      img: "https://picsum.photos/200/300/?random"
-    },
-    {
-      name: "Brenon Linux Boy",
-      price: 3250,
-      img: "https://picsum.photos/200/300/?random"
-    }
-  ],
+  promotions: null,
   loading: false
 };
 

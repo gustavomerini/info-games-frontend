@@ -2,28 +2,7 @@ import * as actionTypes from "../actions/actionTypes";
 import { updateObject } from "../utility";
 
 const initialState = {
-  freeWeek: [
-    {
-      name: "ezreal",
-      img: "https://picsum.photos/200/300/?random"
-    },
-    {
-      name: "ezreal",
-      img: "https://picsum.photos/200/300/?random"
-    },
-    {
-      name: "ezreal",
-      img: "https://picsum.photos/200/300/?random"
-    },
-    {
-      name: "ezreal",
-      img: "https://picsum.photos/200/300/?random"
-    },
-    {
-      name: "ezreal",
-      img: "https://picsum.photos/200/300/?random"
-    }
-  ],
+  freeWeek: null,
   loading: false
 };
 

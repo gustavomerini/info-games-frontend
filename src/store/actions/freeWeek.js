@@ -24,10 +24,9 @@ export const fetchFreeWeekSuccess = freeWeek => {
 export const fetchFreeWeek = () => {
   return dispatch => {
     dispatch(fetchFreeWeekStart());
-    axios.get("/free-week")
+    axios
+      .get("/free-week")
       .then(res => dispatch(fetchFreeWeekSuccess(res)))
-      .catch(err => {
-        dispatch(fetchFreeWeekFail(err));
-      });
+      .catch(err => dispatch(fetchFreeWeekFail(err)));
   };
 };

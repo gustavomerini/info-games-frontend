@@ -1,0 +1,109 @@
+{
+  "promotions": [
+    {
+      "id": "amumu",
+      "skin": "Amumu infernal",
+      "price": "975",
+      "discount": "27",
+      "picture": "https://am-a.akamaihd.net/image?f=https://news-a.akamaihd.net/public/images/pages/2018/october/infamumu/img/splash-infamumu-wp.jpg"
+    },
+    {
+      "id": "jinx",
+      "skin": "Jinx Odisseia",
+      "price": "975",
+      "discount": "27",
+      "picture": "https://am-a.akamaihd.net/image?f=https://news-a.akamaihd.net/public/images/articles/2018/september/odygm/Jinx_Odyssey_Splash_Final_640x360.jpg"
+    },
+    {
+      "id": "evelynn",
+      "skin": "Evelynn Lua Sangrenta",
+      "price": "487",
+      "discount": "50",
+      "picture": "https://am-a.akamaihd.net/image?f=https://news-a.akamaihd.net/public/images/pages/2018/may/bloodmoonevelynn/blood-moon-evelynn.jpg"
+    },
+    {
+      "id": "rumble",
+      "skin": "Rumble barão das terras �ridas",
+      "price": "675",
+      "discount": "50",
+      "picture": "https://am-a.akamaihd.net/image?f=https://news-a.akamaihd.net/public/images/pages/2018/april/badlandsbaronrumble/badlands-baron-rumble.jpg"
+    },
+    {
+      "id": "galio",
+      "skin": "Frangalio",
+      "price": "487",
+      "discount": "50",
+      "picture": "https://am-a.akamaihd.net/image?f=https://news-a.akamaihd.net/public/images/articles/2018/march/aflearnmore/birdio.jpg&resize=640:"
+    },
+    {
+      "id": "kaisa",
+      "skin": "Kai'sa disparos angelicais",
+      "price": "675",
+      "discount": "50",
+      "picture": "https://am-a.akamaihd.net/image?f=https://news-a.akamaihd.net/public/images/articles/2018/march/kaisaavn/kaisa-top.jpg&resize=640:"
+    },
+    {
+      "id": "brand",
+      "skin": "Brand chef�o",
+      "price": "675",
+      "discount": "50",
+      "picture": "https://am-a.akamaihd.net/image?f=https://news-a.akamaihd.net/public/images/pages/2017/august/arcade/img/arcade_brand_splash.jpg"
+    },
+    {
+      "id": "fiora",
+      "skin": "Fiora curtindo o ver�o",
+      "price": "675",
+      "discount": "50",
+      "picture": "https://media.lolusercontent.com/api/embedly/1/image/resize?url=https%3A%2F%2F2.bp.blogspot.com%2F-TzTEAgvGi_Q%2FV3VjW5Iz5QI%2FAAAAAAAARKI%2FSyQgvTWncIoPSXI20UHbckxAqOZuIe2DACLcB%2Fs1600%2FFiora_Splash_5.jpg&key=a45e967db0914c7fb472fd4381e6c85b&width=425"
+    },
+    {
+      "id": "braum",
+      "skin": "Braum cora��o de le�o",
+      "price": "375",
+      "discount": "50",
+      "picture": "https://i.pinimg.com/originals/95/9e/18/959e18478679c3bdbaa87334513e8c5d.png"
+    },
+    {
+      "id": "fiddlesticks",
+      "skin": "Fiddlesticks ascendente",
+      "price": "675",
+      "discount": "50",
+      "picture": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Fiddlesticks_8.jpg"
+    },
+    {
+      "id": "ezreal",
+      "skin": "Ezreal galante",
+      "price": "375",
+      "discount": "50",
+      "picture": "https://i.pinimg.com/originals/7d/29/62/7d2962576de44a6f1f01a02a18aafc56.png"
+    },
+    {
+      "id": "leesin",
+      "skin": "Lee sin curtindo o ver�o",
+      "price": "487",
+      "discount": "50",
+      "picture": "https://br.leagueoflegends.com/sites/default/files/styles/scale_xlarge/public/upload/pool_party_banner_0.jpg?itok=MQ_Xpgdp"
+    },
+    {
+      "id": "quinn",
+      "skin": "Quinn f�nix",
+      "price": "487",
+      "discount": "50",
+      "picture": "https://br.leagueoflegends.com/sites/default/files/styles/wide_medium/public/upload/pool_party_banner_0.jpg?itok=fr4-XA0l"
+    },
+    {
+      "id": "jarvaniv",
+      "skin": "Jarvan IV forja das trevas",
+      "price": "487",
+      "discount": "50",
+      "picture": ""
+    },
+    {
+      "id": "sion",
+      "skin": "Sion b�rbaro",
+      "price": "375",
+      "discount": "50",
+      "picture": "https://i.ytimg.com/vi/-XiiRwa86Y8/hqdefault.jpg"
+    }
+  ]
+}

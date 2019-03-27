@@ -3,20 +3,24 @@ import React, { Component } from "react";
 import styles from "./App.module.css";
 import Card from "./components/Card/Card";
 import { connect } from "react-redux";
-
+import * as actions from "./store/actions/index";
 class App extends Component {
+  componentDidMount() {
+    this.props.onFetchPromotions();
+  }
+
   render() {
-    return (
-      <div class={styles.App}>
-        {this.props.promotions.map(promotion => (
-          <Card
-            url={promotion.img}
-            title={promotion.name}
-            price={promotion.price}
-          />
-        ))}
-      </div>
-    );
+    let cards = <span>Loading... </span>;
+    if (this.props.promotions) {
+      cards = this.props.promotions.map(promotion => (
+        <Card
+          url={promotion.picture}
+          title={promotion.skin}
+          price={promotion.price}
+        />
+      ));
+    }
+    return <div class={styles.App}>{cards}</div>;
   }
 }
 
@@ -28,7 +32,9 @@ const mapStateToProps = state => {
 };
 
 const mapDispatchToProps = dispatch => {
-  return {};
+  return {
+    onFetchPromotions: () => dispatch(actions.fetchPromotions())
+  };
 };
 
 export default connect(

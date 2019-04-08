@@ -1,12 +1,10 @@
 import React from "react";
+import Toolbar from "../../components/UI/Navigation/Toolbar/Toolbar";
 
 const Layout = (props) => {
   return (
     <div>
-      <nav className="Toolbar">
-        <a href="/">Link 1</a>
-        <a href="/">Link 2</a>
-      </nav>
+      <Toolbar></Toolbar>
       {props.children}
     </div>
   );

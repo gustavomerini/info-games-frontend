@@ -4,6 +4,7 @@ import styles from "./App.module.css";
 import Card from "./components/Card/Card";
 import { connect } from "react-redux";
 import * as actions from "./store/actions/index";
+import Layout from "./hoc/Layout/Layout";
 class App extends Component {
   componentDidMount() {
     this.props.onFetchPromotions();
@@ -14,13 +15,18 @@ class App extends Component {
     if (this.props.promotions) {
       cards = this.props.promotions.map(promotion => (
         <Card
+          key={promotion.id}
           url={promotion.picture}
           title={promotion.skin}
           price={promotion.price}
         />
       ));
     }
-    return <div class={styles.App}>{cards}</div>;
+    return (
+      <Layout>
+        <div className={styles.App}>{cards}</div>
+      </Layout>
+    );
   }
 }
 

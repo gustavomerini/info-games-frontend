@@ -1,20 +1,30 @@
-import React from "react";
-import styles from "./Card.module.css";
-const Card = props => {
-  return (
-    <>
-      <div className={styles.card}>
-        <div className={styles.container}>
-          <img src={props.url} alt="tiltado" />
+import React, { useState } from "react";
 
-          <span>
-            <b>{props.title}</b>
-          </span>
-          <span> {props.price} </span>
-        </div>
+const App = () => {
+  const [count, setCount] = useState(0);
+
+  const handleIncrease = () => {
+    setCount(count + 1);
+  };
+
+  const handleDecrease = () => {
+    setCount(count - 1);
+  };
+
+  return (
+    <div>
+      Count: {count}
+      <hr />
+      <div>
+        <button type="button" onClick={handleIncrease}>
+          Increase
+        </button>
+        <button type="button" onClick={handleDecrease}>
+          Decrease
+        </button>
       </div>
-    </>
+    </div>
   );
 };
 
-export default Card;
+export default App;

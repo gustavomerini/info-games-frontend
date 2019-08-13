@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Card from "../../components/Card/Card";
 import styles from "./Promotions.module.css";
 import { connect } from "react-redux";
-import * as actions from "../../store/actions"
+import * as actions from "../../store/actions";
 
 class Promotions extends Component {
   state = {};
@@ -28,6 +28,7 @@ class Promotions extends Component {
 }
 
 const mapStateToProps = state => {
+  console.log(state);
   return {
     freeWeek: state.freeWeekReducer.freeWeek,
     promotions: state.promotionsReducer.promotions
